@@ -1,7 +1,5 @@
 game = [l.strip() for l in open("input.txt")]
 
-d = {'X': 1, 'Y': 2, 'Z': 3}
-
 score = 0
 for round in game:
     p1, p2 = round.split()
