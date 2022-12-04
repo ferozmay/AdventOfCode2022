@@ -1,17 +1,15 @@
 
 elfs = []
-with open("input.txt") as f:
-    data = [l.strip() for l in f]
 
-    total = 0
-    for calorie in data:
+data = [l.strip() for l in open("input.txt")]
 
-        if calorie == "":
-            elfs.append(total)
-            total = 0
-
-        else:
-            total += int(calorie)
+total = 0
+for calorie in data:
+    if calorie == "":
+        elfs.append(total)
+        total = 0
+    else:
+        total += int(calorie)
 
 print("Part 1:", max(elfs))
 
