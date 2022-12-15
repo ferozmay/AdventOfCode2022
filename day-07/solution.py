@@ -19,7 +19,6 @@ for cmd in x:
 
     else:
         for i in range(len(current_path)):
-            print(current_path[:i+1])
             dirs[tuple(current_path[:i + 1])] += int(cmd[0])
 
 
@@ -29,3 +28,15 @@ for size in dirs.values():
         sum += size
 
 print("Part 1:", sum)
+
+
+unused = 70000000 - max(dirs.values())
+
+remaining = 30000000 - unused
+
+l = []
+for size in dirs.values():
+    if size > remaining:
+        l.append(size)
+
+print("Part 2:", min(l))
